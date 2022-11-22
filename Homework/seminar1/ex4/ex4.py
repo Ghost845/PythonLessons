@@ -6,3 +6,13 @@
 
 print('Введите номер четверти: ')
 a = int(input())
+if a > 4 or a < 1:
+    print(f'{a} -> такой четверти нет!')
+elif a == 1:
+    print(f'{a} -> x > 0, y > 0')
+elif a == 2:
+    print(f'{a} -> x < 0, y > 0')
+elif a == 3:
+    print(f'{a} -> x < 0, y < 0')
+elif a == 4:
+    print(f'{a} -> x > 0, y < 0')
