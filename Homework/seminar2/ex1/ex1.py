@@ -8,10 +8,14 @@
 
 print('Введите число: ')
 a = float(input())
+x = a
 
+while 0 < (x % 1) < 1:
+    x *= 10
 sum = 0
-for i in str(a):
-    if i != '.':
-        sum += int(i)
+while x > 0:
+    sum += x % 10
+    x //= 10
+
 print('in -> out')
-print(f'- {a} -> {sum}')
+print(f'- {a} -> {int(sum)}')
