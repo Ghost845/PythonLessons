@@ -1,4 +1,6 @@
 import calc_controller as cctrl
+import os
+import sys
 
 
 def write_console(*args):
@@ -56,7 +58,7 @@ def menu(complex=True):
 
 
 def write_log(*args):
-    with open('calc.log', 'a', encoding='utf-8') as logfile:
+    with open(os.path.join(sys.path[0],'calc.log'), 'a', encoding='utf-8') as logfile:
         logfile.write('\t'.join(list(map(lambda x: str(x), args)))+'\n')
 
 
